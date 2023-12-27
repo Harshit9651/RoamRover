@@ -1,0 +1,91 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row mt-3  " >
+        <div class="col-8 offset-2">
+    <h1> Edit your Listing !</h1>
+    <form method="post" action="/listingsdata/<%=findid._id%>?_method=put"  class="needs-validation" novalidate>
+
+  <div class="mb-3">
+    <label class="form-label" for="descripition" > Edit Title</label>
+    <input class="form-control" name="listing[title]"  value="<%=findid.title%>" required type="text">
+    <div class="valid-feedback">
+       Title Looks good!
+    </div>
+    <div class="invalid-feedback">
+      Please Enter Valid Title ( must in text).
+    </div>
+  </div>
+       
+     
+   
+
+      <div class="mb-3" >
+        <label  class="form-label"  for="descripition" > Edit Descripition</label>
+        <textarea  class="form-control" class="form-control" name="listing[descripition]" required  ><%=findid.descripition%></textarea>
+        <div class="valid-feedback">
+          Looks good!
+       </div>
+       <div class="invalid-feedback">
+         Please Enter Valid Descripition .
+       </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="image" > Edit Image(URL/LINK)</label>
+        <input class="form-control" type="text"   name="listing[image]" required value="<%=findid.image%>" >
+        <div class="valid-feedback">
+          Title Looks good!
+       </div>
+       <div class="invalid-feedback">
+         Please Enter Valid Image(URL/LINK).
+       </div>
+      </div>
+   
+      <div class="mb-3" >
+        <label class="form-label" for="Price" > Edit Price( &#8377 )</label>
+         
+    <input class="form-control" type="number" name="listing[Price]" required value="<%=findid.Price%>">
+    <div class="valid-feedback">
+      Title Looks good!
+   </div>
+   <div class="invalid-feedback">
+     Please Enter Valid Price (In Numaric).
+   </div>
+      </div>
+   
+<div class="row">
+
+    <div class="mb-3 col-md-5">
+        <label class="form-label" for="Location" > Edit Location</label>
+        
+    <input class="form-control" type="text"  name="listing[Location]" required value="<%=findid.Location%>">
+    <div class="valid-feedback">
+      Title Looks good!
+   </div>
+   <div class="invalid-feedback">
+     Please Enter Valid Loaction (In Text).
+   </div>
+        
+      </div>
+      <div class="mb-3 col-md-5">
+        <label class="form-label" for="Countery" > Edit Countery</label>
+        <input class="form-control" type="text" name="listing[Countery]" required value="<%=findid.countery%>">
+        <div class="valid-feedback">
+          Title Looks good!
+       </div>
+       <div class="invalid-feedback">
+         Please Enter Valid Countey(In Text) .
+       </div>
+      </div>
+</div>
+  
+
+  <br><br> <div class="mb-3 ml-5 "> <button class="btn btn-success " >Edit</button></div>
+
+    
+    
+
+</form>
+</div>
+</div>
+    <script src="/javascrpit/script.js"></script>
+</body>

@@ -1,0 +1,85 @@
+
+<% layout("/layouts/boilerplate") %>
+
+<link rel="stylesheet" href="/css/index.css">
+<body>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+        <h2>Create new Listing </h2>
+        <form  method="post" action="/newdata"  class=" needs-validation" novalidate>
+        <div class="mb-3">
+            <label class="label-form" >Enter Title</label>
+            <input  class="form-control" name="title" required placeholder="Title">
+            <div class="valid-feedback">
+                Title Looks good!
+             </div>
+             <div class="invalid-feedback">
+               Please Enter Valid Title ( must in text).
+             </div>
+            
+        </div>
+        <div class="mb-3">
+            <label class="label-form" >Enter Descripition</label>
+            <input  class="form-control" name="descripition" required placeholder="Enter your Descripition">
+            <div class="valid-feedback">
+                Title Looks good!
+             </div>
+             <div class="invalid-feedback">
+               Please Enter Valid descripition ( must in text).
+             </div>
+        </div>
+     
+
+        <div class="mb-3">
+          <label class="label-form" >Attach  Image File</label>
+          <input  class="form-control" name="Image" required type="text" placeholder="Attach File">
+          <div class="valid-feedback">
+              Title Looks good!
+           </div>
+           <div class="invalid-feedback">
+             Please Enter Valid Image .
+           </div>
+      </div>
+
+        <div class="mb-3">
+            <label class="label-form" >Enter Price</label>
+            <input  class="form-control" name="Price" required placeholder="Enter Price( &#8377 )">
+            <div class="valid-feedback">
+                Title Looks good!
+             </div>
+             <div class="invalid-feedback">
+               Please Enter Valid Price ( must in Numaric).
+             </div>
+        </div>
+     <div class="row">
+        <div class="mb-3 col-md-5">
+            <label class="label-form" >Enter Your Location</label>
+            <input  class="form-control" name="Location" required placeholder="Enter Loaction ">
+            <div class="valid-feedback">
+                Title Looks good!
+             </div>
+             <div class="invalid-feedback">
+               Please Enter Valid Location  ( must in text).
+             </div>
+        </div>
+        <div class="mb-3 col-md-5">
+            <label class="label-form" >Enter Countery</label>
+            <input  class="form-control" name="Countery" required placeholder="Countery">
+            <div class="valid-feedback">
+                Title Looks good!
+             </div>
+             <div class="invalid-feedback">
+               Please Enter Valid Title ( must in text).
+             </div>
+        </div>
+     </div>
+        <div class="md-3">
+            <button class="btn btn-success">submit</button>
+        </div>
+        <br><br>
+        </form>
+    </div>
+</div>
+   
+
+</body>
