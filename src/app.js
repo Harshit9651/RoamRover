@@ -1,6 +1,6 @@
 
+require('dotenv').config()
 
-const dataaa = process.env.Map_token;
 
 const express = require("express");
 const app = express();
@@ -59,7 +59,7 @@ require("./db/coonect")
 const Listing = require("./models/listing.js");
 const Review = require("./models/reviwe.js");
 const { error } = require("console");
-const port = 3000;
+const port = process.env.PORT ||8080;
 const cookieparaser = require("cookie-parser"); //for cookie
 const { AsyncLocalStorage } = require("async_hooks");
 const { register } = require("module");
@@ -69,7 +69,7 @@ app.use(cookieparaser());
 
 // for cookie
 app.get("/sendcoookie",(req,res)=>{
-    res.cookie("greet","hello bhn ke lund");
+    res.cookie("greet","hello ");
   res.cookie("greet","dnd")
 
 
@@ -83,12 +83,9 @@ app.get("/sendcoookie",(req,res)=>{
 
 //++..``
 
-app.get("/",(req,res)=>{
-    res.send("hello")
-  
-})
+
 app.listen(port,()=>{
-    console.log("server run succesfully")
+    console.log(`app listition on port ${port}`)
 })
 
 
