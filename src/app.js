@@ -6,7 +6,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
-
+const MongoStore = require('connect-mongo');
 
 //** papport seseeeion session  */
 const session = require("express-session");//for session means recall krna ki ha isko kitni der dikhana hai 
@@ -114,6 +114,14 @@ app.get("/l", async(req,res,next)=>{
     }*/
 })
 
+const store = MongoStore.create({
+    mongoUrl :'mongodb+srv://roamrover:harshit9660@cluster0.sbirrhi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+crypto:{
+    secret:"my secret"
+
+},
+touchAfter:24*3600,
+})
 
 // demo user data 
 
